@@ -1,0 +1,6 @@
+cflags = -Wall -Werror -lcap -lseccomp
+
+rule cc
+  command = gcc $cflags -c $in -o $out
+
+build contained: cc contained.c
